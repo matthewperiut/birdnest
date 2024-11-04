@@ -44,7 +44,7 @@ public class BirdNestEvents {
 
         String blockPath = split[split.length-1];
         Identifier blockId = id.withPath(blockPath);
-        Optional<Block> block = Registries.BLOCK.getOptionalValue(blockId);
+        Optional<Block> block = Registries.BLOCK.getOrEmpty(blockId);
         return block.filter(value -> value instanceof LeavesBlock).isPresent();
     }
 }

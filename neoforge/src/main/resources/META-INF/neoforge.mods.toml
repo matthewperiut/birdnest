@@ -16,7 +16,7 @@ logoFile = "assets/birdnest/icon.png"
 [[dependencies.birdnest]]
 modId="minecraft"
 type="required"
-versionRange="[1.21.2,1.22)"
+versionRange="[1.21,1.21.1]"
 
 [[dependencies.birdnest]]
 modId="neoforge"
