@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "birdnest",
+	"version": "${version}",
+
+	"name": "Bird Nests!",
+	"description": "Catching nests from trees can be rewarding...",
+	"authors": [
+		"Daniking",
+		"Slainlight"
+	],
+	"contributors": [
+		"DerpDerpling",
+		"Soumeh"
+	],
+	"contact":
+	{
+		"sources": "https://github.com/matthewperiut/birdnest",
+		"issues": "https://github.com/matthewperiut/birdnest/issues"
+	},
+
+	"license": "GPLv2.1",
+	"icon": "assets/birdnest/icon.png",
+
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.matthewperiut.birdnest.fabric.BirdNestFabric"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": ["1.21", "1.21.1"],
+		"architectury": "*",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
