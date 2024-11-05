@@ -5,7 +5,7 @@ issueTrackerURL = "https://github.com/matthewperiut/birdnests/issues"
 
 [[mods]]
 modId = "birdnest"
-version = "${version}"
+version = "1.0.0"
 displayName = "Bird Nests!"
 authors = "Daniking,Slainlight,DerpDerpling,Soumeh"
 description = '''
@@ -16,7 +16,7 @@ logoFile = "assets/birdnest/icon.png"
 [[dependencies.birdnest]]
 modId="minecraft"
 type="required"
-versionRange="[1.20.5,1.20.6]"
+versionRange="[1.20,1.20.4]"
 
 [[dependencies.birdnest]]
 modId="neoforge"

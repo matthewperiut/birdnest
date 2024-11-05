@@ -13,6 +13,6 @@ public class BirdNest
 	public static void init()
 	{
 		BirdNestItems.initialize();
-		BirdNestEvents.initialize();
+		//BirdNestEvents.initialize();
 	}
 }

@@ -17,13 +17,15 @@ import net.minecraft.util.Identifier;
 import static com.matthewperiut.birdnest.BirdNest.MOD_ID;
 
 public class BirdNestItems {
-    public static final Supplier<RegistrarManager> MANAGER = Suppliers.memoize(() -> RegistrarManager.get(MOD_ID));
-    public static final Registrar<Item> ITEMS = MANAGER.get().get(RegistryKeys.ITEM);
-    public static final RegistrySupplier<Item> BIRD_NEST = ITEMS.register(Identifier.of(MOD_ID, "birds_nest"), () -> new BirdsNestItem(new Item.Settings()));
+
+    public static RegistrySupplier<Item> BIRD_NEST;
 
     public static void initialize() {
         CreativeTabRegistry.modifyBuiltin(Registries.ITEM_GROUP.get(ItemGroups.TOOLS.getValue()), (flags, output, canUseGameMasterBlocks) -> {
             output.acceptAfter(Items.WARPED_FUNGUS_ON_A_STICK, new ItemStack(BIRD_NEST));
         });
+        Supplier<RegistrarManager> MANAGER = Suppliers.memoize(() -> RegistrarManager.get(MOD_ID));
+        Registrar<Item> ITEMS = MANAGER.get().get(RegistryKeys.ITEM);
+        BIRD_NEST = ITEMS.register(Identifier.of(MOD_ID, "birds_nest"), () -> new BirdsNestItem(new Item.Settings()));
     }
 }

@@ -22,11 +22,6 @@ import java.util.List;
 
 public class BirdsNestItem extends Item {
 
-    private static final RegistryKey<LootTable> LOOT_TABLE = RegistryKey.of(
-            RegistryKeys.LOOT_TABLE,
-            Identifier.of(BirdNest.MOD_ID, "gameplay/birds_nest_loot")
-    );
-
     public BirdsNestItem(Settings settings) {
         super(settings);
     }
@@ -38,14 +33,14 @@ public class BirdsNestItem extends Item {
 
         world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.NEUTRAL, 0.5F, 0.4F / (player.getRandom().nextFloat() * 0.4F + 0.8F));
 
-        stack.decrementUnlessCreative(1, player);
+        stack.decrement(1);
         world.playSound(player, player.getBlockPos(), SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.NEUTRAL, 1.0F, 1.0F);
         spawnLoot((ServerWorld)world, player);
         return TypedActionResult.success(stack);
     }
 
     private static void spawnLoot(ServerWorld world, PlayerEntity player) {
-        LootTable lootTable = world.getServer().getReloadableRegistries().getLootTable(LOOT_TABLE);
+        LootTable lootTable = world.getServer().getLootManager().getLootTable(Identifier.of(BirdNest.MOD_ID, "gameplay/birds_nest_loot"));
         LootContextParameterSet parameters = new LootContextParameterSet.Builder(world)
                 .build(LootContextTypes.EMPTY);
         List<ItemStack> loot = lootTable.generateLoot(parameters);
