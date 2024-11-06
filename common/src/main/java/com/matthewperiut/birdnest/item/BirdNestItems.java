@@ -22,7 +22,7 @@ public class BirdNestItems {
 
     public static void initialize() {
         CreativeTabRegistry.modifyBuiltin(Registries.ITEM_GROUP.get(ItemGroups.TOOLS.getValue()), (flags, output, canUseGameMasterBlocks) -> {
-            output.acceptAfter(Items.WARPED_FUNGUS_ON_A_STICK, new ItemStack(BIRD_NEST));
+            output.acceptAfter(Items.WARPED_FUNGUS_ON_A_STICK, new ItemStack(BIRD_NEST.get()));
         });
         Supplier<RegistrarManager> MANAGER = Suppliers.memoize(() -> RegistrarManager.get(MOD_ID));
         Registrar<Item> ITEMS = MANAGER.get().get(RegistryKeys.ITEM);

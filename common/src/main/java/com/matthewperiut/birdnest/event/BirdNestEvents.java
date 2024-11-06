@@ -37,10 +37,6 @@ public class BirdNestEvents {
         lootTableModificationContext.addPool(poolBuilder);
     }
 
-    private static void modifyLootTable(RegistryKey<LootTable> lootTableRegistryKey, LootEvent.LootTableModificationContext lootTableModificationContext, boolean builtin) {
-
-    }
-
     public static boolean isLeavesBlock(Identifier id) {
         String[] split = id.getPath().split("/");
         String type = split[0];
@@ -48,7 +44,7 @@ public class BirdNestEvents {
 
         String blockPath = split[split.length-1];
         Identifier blockId = id.withPath(blockPath);
-        Optional<Block> block = Registries.BLOCK.getOrEmpty(blockId);
+        Optional<Block> block = Optional.of(Registries.BLOCK.get(blockId));
         return block.filter(value -> value instanceof LeavesBlock).isPresent();
     }
 }

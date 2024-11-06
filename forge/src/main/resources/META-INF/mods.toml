@@ -1,0 +1,35 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+issueTrackerURL = "https://github.com/matthewperiut/birdnests/issues"
+license = "GPLv2.1"
+
+[[mods]]
+modId = "birdnest"
+version = "${version}"
+displayName = "Bird Nests!"
+authors = "Daniking,Slainlight,DerpDerpling,Soumeh"
+description = '''
+Catching nests from trees can be rewarding...
+'''
+logoFile = "icon.png"
+
+[[dependencies.birdnest]]
+modId = "forge"
+mandatory = true
+versionRange = "[47,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.birdnest]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20.1,1.20.4]"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.birdnest]]
+modId = "architectury"
+mandatory = true
+versionRange = "[9.1.12,)"
+ordering = "AFTER"
+side = "BOTH"
