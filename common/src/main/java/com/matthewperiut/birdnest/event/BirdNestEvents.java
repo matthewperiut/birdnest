@@ -1,5 +1,6 @@
 package com.matthewperiut.birdnest.event;
 
+import com.matthewperiut.birdnest.config.BirdNestConfig;
 import dev.architectury.event.events.common.LootEvent;
 import net.minecraft.block.Block;
 import net.minecraft.block.LeavesBlock;
@@ -31,7 +32,7 @@ public class BirdNestEvents {
 
         LootPool.Builder poolBuilder = LootPool.builder()
                 .rolls(ConstantLootNumberProvider.create(1))
-                .conditionally(RandomChanceLootCondition.builder(0.05f))
+                .conditionally(RandomChanceLootCondition.builder(1.f / ((float)BirdNestConfig.getLeaves())))
                 .with(ItemEntry.builder(BIRD_NEST.get()))
                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)));
         lootTableModificationContext.addPool(poolBuilder);
