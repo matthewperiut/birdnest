@@ -1,7 +1,7 @@
 modLoader = "javafml"
 loaderVersion = "[47,)"
 issueTrackerURL = "https://github.com/matthewperiut/birdnests/issues"
-license = "GPLv2.1"
+license = "GPLv3"
 
 [[mods]]
 modId = "birdnest"
