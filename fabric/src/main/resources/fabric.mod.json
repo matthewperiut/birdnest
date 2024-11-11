@@ -19,7 +19,7 @@
 		"issues": "https://github.com/matthewperiut/birdnest/issues"
 	},
 
-	"license": "GPLv2.1",
+	"license": "GPLv3",
 	"icon": "assets/birdnest/icon.png",
 
 	"environment": "*",

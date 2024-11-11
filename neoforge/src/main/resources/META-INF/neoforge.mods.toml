@@ -1,6 +1,6 @@
 modLoader="javafml" #mandatory
 loaderVersion="[2,)" #mandatory
-license="GPLv2.1"
+license="GPLv3"
 issueTrackerURL = "https://github.com/matthewperiut/birdnests/issues"
 
 [[mods]]
