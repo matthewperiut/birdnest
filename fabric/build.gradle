@@ -3,7 +3,7 @@ plugins {
 }
 
 base {
-    archivesName = "chisel-fabric"
+    archivesName = "birdnest-fabric"
 }
 
 architectury {
