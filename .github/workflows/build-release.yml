@@ -48,8 +48,6 @@ jobs:
           curseforge-id: 1134584
           curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
 
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
           files: |
             fabric/build/libs/!(*-@(sources|dev|dev-shadow|javadoc).jar)
 
@@ -72,8 +70,6 @@ jobs:
 
           curseforge-id: 1134584
           curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
-
-          github-token: ${{ secrets.GITHUB_TOKEN }}
 
           name: '[${{ steps.versions.outputs.minecraft-version }}] NeoForge ${{ steps.versions.outputs.mod-version }}'
           version: 'neoforge-${{ steps.versions.outputs.minecraft-version }}-${{ steps.versions.outputs.mod-version }}'
