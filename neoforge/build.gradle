@@ -3,7 +3,7 @@ plugins {
 }
 
 base {
-    archivesName = "chisel-neoforge"
+    archivesName = "birdnest-neoforge"
 }
 
 architectury {
