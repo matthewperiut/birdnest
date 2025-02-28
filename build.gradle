@@ -21,7 +21,7 @@ subprojects {
             it.mappings("dev.architectury:yarn-mappings-patch-neoforge:1.21+build.4")
         }
 
-        modImplementation "com.periut.cryonicconfig:cryonicconfig-${project.name}:1.0.0+mc${rootProject.minecraft_version}"
+        modImplementation "com.periut.cryonicconfig:cryonicconfig-${project.name}:1.0.0+mc1.21.4"
     }
 }
 
