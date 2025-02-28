@@ -27,3 +27,8 @@ versionRange="[0,)"
 modId="architectury"
 type="required"
 versionRange="[0,)"
+
+[[dependencies.birdnest]]
+modId="cryonicconfig"
+type="required"
+versionRange="[0,)"
