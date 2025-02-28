@@ -33,3 +33,10 @@ mandatory = true
 versionRange = "[9.1.12,)"
 ordering = "AFTER"
 side = "BOTH"
+
+[[dependencies.birdnest]]
+modId = "cryonicconfig"
+mandatory = true
+versionRange = "[0,)"
+ordering = "NONE"
+side = "BOTH"
