@@ -20,6 +20,8 @@ subprojects {
             it.mappings "net.fabricmc:yarn:${rootProject.yarn_mappings}:v2"
             it.mappings("dev.architectury:yarn-mappings-patch-neoforge:1.20.5+build.3")
         }
+
+        modImplementation "com.periut.cryonicconfig:cryonicconfig-${project.name}:1.0.0+mc${rootProject.minecraft_version}"
     }
 }
 
@@ -56,6 +58,7 @@ allprojects {
             url "https://maven.teamresourceful.com/repository/maven-public/"
         }
         maven { url "https://maven.neoforged.net/" }
+        maven { url "https://maven.periut.com/" }
 
     }
 
